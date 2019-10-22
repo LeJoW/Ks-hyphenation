@@ -20,7 +20,7 @@ class ExternalCmds {
         const formPost = new FormData;
         formPost.append('file-to-process', this.getFileFromString(text));
         formPost.append('lang', language);
-        this._xhr.open('post', '/example');
+        this._xhr.open('post', 'https://lj4.wilke.xyz/example');
         return new Promise((resolve, reject) => {
             this._xhr.onload = () => {
                 resolve(this._xhr.responseText);
