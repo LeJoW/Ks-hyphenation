@@ -74,7 +74,7 @@ class Example {
       this._ext
         .sendHyphenationRequest(this.before(text), this._language)
         .then(text => {
-          resolve(this.after(text));
+          resolve(this.test(text));
         });
     });
   }
