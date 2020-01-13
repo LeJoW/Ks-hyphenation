@@ -1,118 +1,160 @@
 <!DOCTYPE html>
 <html lang="fr">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>CDK</title>
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-150111716-1"></script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-150111716-1"
+    ></script>
     <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-        gtag('config', 'UA-150111716-1');
+      gtag("config", "UA-150111716-1");
     </script>
     <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
-        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://lj4.wilke.xyz/dashboard/view/css/new-age.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,400,500&amp;subset=latin-ext"
-        rel="stylesheet">
-    <link rel="stylesheet" href="https://lj4.wilke.xyz/dashboard/view/style.css">
-</head>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+      integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://lj4.wilke.xyz/dashboard/view/css/new-age.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,400,500&amp;subset=latin-ext"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://lj4.wilke.xyz/dashboard/view/style.css"
+    />
+  </head>
 
-<body data-spy="scroll" data-target="#navbar" data-offset="70">
+  <body data-spy="scroll" data-target="#navbar" data-offset="70">
     <nav class="navbar navbar-default navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <a class="navbar-brand" href="#">
-                    <span>CDK</span>
-                </a>
-            </div>
-            <!--/.nav-collapse -->
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">
+            <span>CDK</span>
+          </a>
         </div>
+        <!--/.nav-collapse -->
+      </div>
     </nav>
 
     <section>
-        <div class="container">
-            <div class="row">
-                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                    <div class="page-header">
-                        <h1 class="row">
-                            <div class="col-sm-9">
-                                <small class="glyphicon glyphicon-edit"></small>
-                                Entrée
-                            </div>
-                            <div class="form-group col-sm-3">
-                                <select class="form-control" name="language" id="language-select">
-                                    <option value="la-VA">Latin</option>
-                                    <option value="fr-FR">Français</option>
-                                    <option value="en-US">Anglais</option>
-                                </select>
-                            </div>
-                        </h1>
-                    </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <div class="page-header">
+              <h1 class="row">
+                <div class="col-sm-9">
+                  <small class="glyphicon glyphicon-edit"></small>
+                  Entrée
                 </div>
-            </div>
-            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                <div class="form-group">
-                    <label for="text">Texte à césurer</label>
-                    <button type="button" class="btn btn-primary btn-outline pull-right" style="margin-bottom: 10px"
-                        id="go-button" onclick="events.onGoIt()">Césurer</button>
-                    <textarea autofocus class="form-control" name="text" id="text" rows="5"></textarea>
+                <div class="form-group col-sm-3">
+                  <select
+                    class="form-control"
+                    name="language"
+                    id="language-select"
+                  >
+                    <option value="la-VA">Latin</option>
+                    <option value="fr-FR">Français</option>
+                    <option value="en-US">Anglais</option>
+                  </select>
                 </div>
+              </h1>
             </div>
+          </div>
         </div>
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+          <div class="form-group">
+            <label for="text">Texte à césurer</label>
+            <button
+              type="button"
+              class="btn btn-primary btn-outline pull-right"
+              style="margin-bottom: 10px"
+              id="go-button"
+              onclick="events.onGoIt()"
+            >
+              Césurer
+            </button>
+            <textarea
+              autofocus
+              class="form-control"
+              name="text"
+              id="text"
+              rows="5"
+            ></textarea>
+          </div>
+        </div>
+      </div>
     </section>
 
     <section class="bg-primary">
-        <div class="container">
-            <div class="row">
-                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                    <div class="page-header">
-                        <h1>
-                            <small class="glyphicon glyphicon-copy"></small>
-                            Sortie</h1>
-                    </div>
-                </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <div class="page-header">
+              <h1>
+                <small class="glyphicon glyphicon-copy"></small>
+                Sortie
+              </h1>
             </div>
-            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                <div class="form-group">
-                    <label for="result">Texte césuré</label>
-                    <button type="button" class="btn btn-primary btn-outline pull-right" style="margin-bottom: 10px"
-                        id="copy-button">Copier</button>
-                    <textarea class="form-control" name="result" id="result" rows="5"></textarea>
-                </div>
-            </div>
+          </div>
         </div>
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+          <div class="form-group">
+            <label for="result">Texte césuré</label>
+            <button
+              type="button"
+              class="btn btn-primary btn-outline pull-right"
+              style="margin-bottom: 10px"
+              id="copy-button"
+            >
+              Copier
+            </button>
+            <textarea
+              class="form-control"
+              name="result"
+              id="result"
+              rows="5"
+            ></textarea>
+          </div>
+        </div>
+      </div>
     </section>
 
     <footer>
-        <div class="container-fluid">
-            <div class="row">
-                <p>Plain text hyphenation : idea Koenraad Moreau</p>
-                <p>Latin dictionary : Anne-Edgar Wilke</p>
-                <p>French dictionary :
-                    <a href="https://github.com/Kozea/Pyphen">Kozea/Pyphen</a>
-                </p>
-                <hr>
-                <p>Other Web Apps :
-                    <a href="https://lj3.wilke.xyz">GajaThèque</a>
-                    and
-                    <a href="https://lj5.wilke.xyz/test/greg">GE</a>.</p>
-            </div>
+      <div class="container-fluid">
+        <div class="row">
+          <p>Plain text hyphenation : idea Koenraad Moreau</p>
+          <p>Latin dictionary : Anne-Edgar Wilke</p>
+          <hr />
+          <p>
+            Develloped by Leon-Joseph Wilke
+          </p>
         </div>
+      </div>
     </footer>
     <!-- /.container -->
     <!-- Bootstrap core JavaScript ================================================== -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
-        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
-        crossorigin="anonymous"></script>
-    <script type="text/javascript" src="https://raw.githubusercontent.com/LeJoW/Ks-hyphenation/master/main.js"></script>
-</body>
-
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+      integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+      crossorigin="anonymous"
+    ></script>
+    <script type="text/javascript" src="./main.js"></script>
+  </body>
 </html>
