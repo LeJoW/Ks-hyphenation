@@ -6,6 +6,11 @@ Just write your text in the area and get automatically your text with hyphenatio
 ## Supported languages
 
 The app supports now three languages :
-- French
-- English
-- Latin
+
+-   French
+-   English
+-   Latin
+
+## Go it !
+
+The application is available here : [https://lejow.github.io/Ks-hyphenation](https://lejow.github.io/Ks-hyphenation)
