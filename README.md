@@ -14,3 +14,7 @@ The app supports now three languages :
 ## Go it !
 
 The application is available here : [https://lejow.github.io/Ks-hyphenation](https://lejow.github.io/Ks-hyphenation)
+
+## API
+
+See documentation in `/API.md`
