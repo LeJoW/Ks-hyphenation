@@ -11,7 +11,7 @@ The app supports now three languages :
 -   English
 -   Latin
 
-## Go it !
+## Go it&nbsp;!
 
 The application is available here : [https://lejow.github.io/Ks-hyphenation](https://lejow.github.io/Ks-hyphenation)
 
