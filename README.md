@@ -5,10 +5,8 @@ Just write your text in the area and get automatically your text with hyphenatio
 
 ## Supported languages
 
-The app supports now three languages :
+The app supports one single language :
 
--   French
--   English
 -   Latin
 
 ## Go it&nbsp;!
