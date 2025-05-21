@@ -1,6 +1,0 @@
-{
-    "/": ["main.php", "base.twig"],
-    "/example": "example.php",
-    "/example.api": "example.api.php",
-    "error.404": "errors/error.404.html"
-}
