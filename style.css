@@ -1,0 +1,46 @@
+body,
+html {
+    height: auto;
+    width: auto;
+    min-width: 100%;
+    min-height: 100%;
+}
+html *:not(pre) {
+    font-family: 'Roboto', sans-serif;
+}
+body {
+    padding-top: 70px;
+    position: relative;
+}
+.navbar {
+    background-color: #f8f8f8ed;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+}
+.well {
+    text-align: center;
+}
+.work-matter-today {
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+.work-matter-today hr {
+    margin-bottom: 20px;
+}
+label {
+    font-weight: 400;
+}
+ul {
+    -webkit-padding-start: 0;
+}
+.navbar p {
+    font-size: 12px;
+    line-height: 1;
+}
+.bg-primary .list-group-item {
+    background: #fad183;
+}
+.bg-primary .progress {
+    background-color: #f5f5f561;
+}

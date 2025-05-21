@@ -1,34 +1,28 @@
 class ExternalCmds {
     /**
-     * @private _xhr
+     * @private _stdout
      */
 
     constructor() {
-        this._xhr = new XMLHttpRequest();
-    }
-
-    /**
-     * @param text:DOMString
-     * @param name:String
-     * @returns [file:Blob]
-     */
-    getFileFromString(text) {
-        return new File([text], "hyphenation-text", { type: "text/plain" });
+        // out = this._stdout; // out is provided by example.js (emscripten)
     }
 
     sendHyphenationRequest(text, language) {
-        const formPost = new FormData();
-        formPost.append("file-to-process", this.getFileFromString(text));
-        formPost.append("lang", language);
-        this._xhr.open("post", "https://lj4.wilke.xyz/example");
+        const inputLength = text.trim().split("\n").length;
         return new Promise((resolve, reject) => {
-            this._xhr.onload = () => {
-                resolve(this._xhr.responseText);
-            };
-            this._xhr.onerror = () => {
-                reject(this._xhr);
-            };
-            this._xhr.send(formPost);
+            let accumulator = [];
+            FS.writeFile("./io-file", text);
+            try {
+                const exitCode = callMain(["la_VA/hyph_la_VA.dic", "io-file"]);
+                out = function (output) {
+                    accumulator.push(output);
+                    if (accumulator.length === inputLength) {
+                        resolve(accumulator.join("\n") + "\n");
+                    }
+                };
+            } catch (e) {
+                reject(("Something went wrong with callMain", e));
+            }
         });
     }
 }
